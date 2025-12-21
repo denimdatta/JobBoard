@@ -5,7 +5,12 @@
 
     <ul>
         @foreach($jobs as $job)
-            <li><strong>{{ $job['title'] }}</strong>: pays <i>{{ $job['salary'] }}</i> in <u>{{ $job['location'] }}</u></li>
+            <li>
+                <a href="/jobs/{{ $job['id'] }}" class="text-blue-500 hover:underline">
+                    <strong>{{ $job['title'] }}</strong>
+                </a>
+                : pays <i>{{ $job['salary'] }}</i> in <u>{{ $job['location'] }}</u>
+            </li>
         @endforeach
     </ul>
 </x-layout>
