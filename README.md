@@ -12,3 +12,19 @@
 	* ![Git](https://img.shields.io/badge/Git-2.50.1-F05032?style=plastic&logo=git)
 	* ![WebStorm](https://img.shields.io/badge/PhpStorm-2025.3-000000?style=plastic&logo=phpstorm)
 	* ![GitKraken](https://img.shields.io/badge/GitKraken-11.1.1-179287?style=plastic&logo=gitkraken)
+
+## Prerequisites 
+* Php
+* Composer
+* Laravel
+* PostgreSQL
+
+## How to Run
+1. `git clone` this repo
+2. `cd <workspace>/JobBoard`
+3. Run `composer install`
+4. Generate an application key with `php artisan key:generate`
+5. Create a user and database for PostgreSQL. Update `.env` file accordingly.
+6. Start PostgreSQL server. 
+7. Run `php artisan migrate`
+8. Start the server with `php artisan serve`
