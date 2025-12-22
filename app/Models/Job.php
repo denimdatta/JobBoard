@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Arr;
+
 class Job
 {
     public static function getAllJobs(): array
@@ -26,5 +28,12 @@ class Job
                 'location' => 'Remote'
             ]
         ];
+    }
+
+    public static function find(int $id): array
+    {
+        $job =  Arr::first(static::getAllJobs(), fn($job) => $job['id'] === $id);
+
+        return $job;
     }
 }
