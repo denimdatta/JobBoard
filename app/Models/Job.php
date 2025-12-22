@@ -34,6 +34,8 @@ class Job
     {
         $job =  Arr::first(static::getAllJobs(), fn($job) => $job['id'] === $id);
 
+        abort_if(!$job, 404, 'Job not found.');
+
         return $job;
     }
 }
