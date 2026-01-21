@@ -39,3 +39,10 @@
    ```
    ./vendor/bin/phpstan analyse --memory-limit=1G
    ```
+
+## Code Style Fixer
+1. `cd` to the project root directory.
+2. Run Pint
+   ```
+   ./vendor/bin/pint --parallel
+   ```
