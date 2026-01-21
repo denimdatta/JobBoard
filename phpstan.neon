@@ -5,6 +5,8 @@ parameters:
     paths:
         - app/
         - tests/
+    excludePaths:
+        - database
     level: 5
     tmpDir: storage/larastan
     ignoreErrors:
