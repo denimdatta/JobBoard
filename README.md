@@ -35,3 +35,7 @@
    ```
    ./vendor/bin/phpstan analyse
    ```
+1. If LaraStan fails with memory issues, try increasing the memory limit by running: 
+   ```
+   ./vendor/bin/phpstan analyse --memory-limit=1G
+   ```
