@@ -1,0 +1,20 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "/Users/denimdatta/Library/Application Support/Herd/bin/php84",
+            "args": [
+                "/Users/denimdatta/Workspace/PHP/JobBoard/artisan",
+                "boost:mcp"
+            ]
+        },
+        "herd": {
+            "command": "/Users/denimdatta/Library/Application Support/Herd/bin/php84",
+            "args": [
+                "/Applications/Herd.app/Contents/Resources/herd-mcp.phar"
+            ],
+            "env": {
+                "SITE_PATH": "/Users/denimdatta/Workspace/PHP/JobBoard"
+            }
+        }
+    }
+}
