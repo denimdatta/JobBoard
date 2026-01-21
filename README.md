@@ -28,3 +28,10 @@
 6. Start PostgreSQL server. 
 7. Run `php artisan migrate`
 8. Start the server with `php artisan serve`
+
+## Code Static Analysis
+1. `cd` to the project root directory. 
+1. Run LaraStan  
+   ```
+   ./vendor/bin/phpstan analyse
+   ```
