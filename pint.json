@@ -1,0 +1,12 @@
+{
+	"preset": "laravel",
+	"rules": {
+		"phpdoc_align": {
+			"align": "vertical",
+			"spacing": 2
+		},
+		"concat_space": {
+			"spacing": "one"
+		}
+	}
+}
