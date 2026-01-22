@@ -30,7 +30,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class JobListing extends Model
 {
-    //
+    /**
+     * Defines the relationship between the JobListing and the Country model.
+     *
+     * @return  \Illuminate\Database\Eloquent\Relations\BelongsTo  Relationship instance pointing to the Country model
+     */
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class, 'country_code', 'iso_code');
