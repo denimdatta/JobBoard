@@ -33,11 +33,11 @@
 1. `cd` to the project root directory. 
 1. Run LaraStan  
    ```
-   ./vendor/bin/phpstan analyse
+   ./vendor/bin/phpstan analyze
    ```
 1. If LaraStan fails with memory issues, try increasing the memory limit by running: 
    ```
-   ./vendor/bin/phpstan analyse --memory-limit=1G
+   ./vendor/bin/phpstan analzse --memory-limit=1G
    ```
 
 ## Code Style Fixer
