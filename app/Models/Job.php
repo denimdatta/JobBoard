@@ -16,7 +16,7 @@ class Job
     /**
      * Retrieves a list of all available jobs.
      *
-     * @return array
+     * @return  array  An array of job details.
      */
     public static function getAllJobs(): array
     {
@@ -49,16 +49,16 @@ class Job
      * using the provided ID. If no job is found with the given ID,
      * a 404 HTTP response is triggered with the message "Job not found."
      *
-     * @param int $id The unique identifier of the job to be retrieved.
-     * @return array The job details matching the provided ID.
+     * @param   int    $id  The unique identifier of the job to be retrieved.
+     * @return  array  The job details matching the provided ID.
      *
-     * @throws HttpException If the job is not found.
+     * @throws  HttpException  If the job is not found.
      */
     public static function find(int $id): array
     {
         $job = Arr::first(static::getAllJobs(), fn ($job) => $job['id'] === $id);
 
-        abort_if(! $job, 404, 'Job not found.');
+        abort_if( ! $job, 404, 'Job not found.');
 
         return $job;
     }
