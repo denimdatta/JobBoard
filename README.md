@@ -46,3 +46,9 @@
    ```
    ./vendor/bin/pint --parallel
    ```
+
+## Useful Commands
+1. Generate PHP Doc Blocks for all models:
+   ```
+   php artisan ide-helper:models -WR
+   ```
