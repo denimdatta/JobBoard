@@ -54,5 +54,11 @@
    ```
   
 ## Composer Commands
-1. LaraStan: `composer phpstan`
-2. Pint: `composer pint`
+1. **Code Static Analysis** using ***LaraStan***: 
+   ```
+   composer phpstan
+   ```
+2. **Code Style Fixer** using ***Pint***: 
+   ```
+   composer pint
+   ```
