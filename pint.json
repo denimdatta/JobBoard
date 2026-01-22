@@ -12,6 +12,9 @@
 			"allow_mixed": true,
 			"allow_unused_params": false,
 			"remove_inheritdoc": false
+		},
+		"ordered_imports": {
+			"sort_algorithm": "alpha"
 		}
 	}
 }
