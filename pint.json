@@ -26,6 +26,9 @@
 		"not_operator_with_space": true,
 		"single_quote": {
 			"strings_containing_single_quote_chars": true
+		},
+		"align_multiline_comment": {
+			"comment_type" : "phpdocs_like"
 		}
 	}
 }
