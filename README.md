@@ -52,3 +52,7 @@
    ```
    php artisan ide-helper:models -WR
    ```
+  
+## Composer Commands
+1. LaraStan: `composer phpstan`
+2. Pint: `composer pint`
