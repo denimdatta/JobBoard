@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Http\Response;
 use Illuminate\Support\Arr;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -58,7 +59,7 @@ class Job
     {
         $job = Arr::first(static::getAllJobs(), fn ($job) => $job['id'] === $id);
 
-        abort_if( ! $job, 404, 'Job not found.');
+        abort_if( ! $job, Response::HTTP_NOT_FOUND, 'Job not found.');
 
         return $job;
     }
