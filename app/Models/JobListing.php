@@ -9,26 +9,28 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 
 /**
- * @property int $id
- * @property string $title
- * @property string $location
- * @property string $currency_code
- * @property int $salary Salary in Low Denomination (Cent or Paisa
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string $country_code
+ * @property  int          $id
+ * @property  string       $title
+ * @property  string       $location
+ * @property  string       $currency_code
+ * @property  int          $salary         Salary in Low Denomination (Cent or Paisa
+ * @property  Carbon|null  $created_at
+ * @property  Carbon|null  $updated_at
+ * @property  string       $country_code
  * @property-read Country $country
- * @method static Builder<static>|JobListing newModelQuery()
- * @method static Builder<static>|JobListing newQuery()
- * @method static Builder<static>|JobListing query()
- * @method static Builder<static>|JobListing whereCountryCode($value)
- * @method static Builder<static>|JobListing whereCreatedAt($value)
- * @method static Builder<static>|JobListing whereCurrencyCode($value)
- * @method static Builder<static>|JobListing whereId($value)
- * @method static Builder<static>|JobListing whereLocation($value)
- * @method static Builder<static>|JobListing whereSalary($value)
- * @method static Builder<static>|JobListing whereTitle($value)
- * @method static Builder<static>|JobListing whereUpdatedAt($value)
+ *
+ * @method  static  Builder<static>|JobListing  newModelQuery()
+ * @method  static  Builder<static>|JobListing  newQuery()
+ * @method  static  Builder<static>|JobListing  query()
+ * @method  static  Builder<static>|JobListing  whereCountryCode($value)
+ * @method  static  Builder<static>|JobListing  whereCreatedAt($value)
+ * @method  static  Builder<static>|JobListing  whereCurrencyCode($value)
+ * @method  static  Builder<static>|JobListing  whereId($value)
+ * @method  static  Builder<static>|JobListing  whereLocation($value)
+ * @method  static  Builder<static>|JobListing  whereSalary($value)
+ * @method  static  Builder<static>|JobListing  whereTitle($value)
+ * @method  static  Builder<static>|JobListing  whereUpdatedAt($value)
+ *
  * @mixin Eloquent
  */
 class JobListing extends Model
