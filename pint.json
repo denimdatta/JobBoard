@@ -23,6 +23,9 @@
 				"case": "none"
 			}
 		},
-		"not_operator_with_space": true
+		"not_operator_with_space": true,
+		"single_quote": {
+			"strings_containing_single_quote_chars": true
+		}
 	}
 }
