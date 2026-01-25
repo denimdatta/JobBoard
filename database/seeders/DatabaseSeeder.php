@@ -18,15 +18,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::updateOrCreate([
+        User::updateOrCreate(
             [
-                'name' => 'Test User',
+                'username' => 'testuser',
             ],
             [
-                'email' => 'test@example.com',
+                'email' => 'test_user@example.com',
                 'password' => bcrypt('test'),
-            ],
-        ]);
+                'first_name' => 'Test',
+                'last_name' => 'User',
+            ]
+        );
 
         $this->call([
             CountrySeeder::class,
