@@ -14,9 +14,9 @@ Route::get('/jobs', function () {
 });
 
 Route::get('/jobs/{id}', function ($id) {
-    $job = JobListing::query()->find($id);
-
-    return view('job', ['job' => $job]);
+    return view('job', [
+        'job' => JobListing::query()->find($id)
+    ]);
 });
 
 Route::get('/about', function () {
