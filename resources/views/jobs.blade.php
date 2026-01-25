@@ -9,7 +9,7 @@
                 <a href="/jobs/{{ $job['id'] }}" class="text-blue-500 hover:underline">
                     <strong>{{ $job['title'] }}</strong>
                 </a>
-                : pays <i>{{ $job['currency_code'] }} {{ $job['salary'] / 100 }}</i> in <u>{{ $job['location'] }}</u>
+                : pays <i>{{ $job['currency_code'] }} {{ $job['salary'] / 100 }}</i> in <u>{{ $job['location'] }}, {{ $job['country_code'] }}</u>
             </li>
         @endforeach
     </ul>
