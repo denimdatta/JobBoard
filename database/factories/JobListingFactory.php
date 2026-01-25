@@ -18,7 +18,7 @@ class JobListingFactory extends Factory
      */
     public function definition(): array
     {
-        $company = Company::factory()->create();
+        $company = Company::query()->inRandomOrder()->first();
         $country = Country::query()->inRandomOrder()->first();
 
         $country_code = $country->iso_code;
