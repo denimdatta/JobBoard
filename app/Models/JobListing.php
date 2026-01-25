@@ -38,6 +38,14 @@ class JobListing extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'location',
+        'currency_code',
+        'salary',
+        'country_code',
+    ];
+
     /**
      * Defines the relationship between the JobListing and the Country model.
      *
