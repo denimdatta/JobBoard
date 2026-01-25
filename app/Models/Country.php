@@ -9,8 +9,9 @@ use Illuminate\Support\Carbon;
 
 /**
  * @property  int          $id
- * @property  string       $iso_code
  * @property  string       $name
+ * @property  string       $iso_code
+ * @property  string|null  $currency_code
  * @property  Carbon|null  $created_at
  * @property  Carbon|null  $updated_at
  *
@@ -18,6 +19,7 @@ use Illuminate\Support\Carbon;
  * @method  static  Builder<static>|Country  newQuery()
  * @method  static  Builder<static>|Country  query()
  * @method  static  Builder<static>|Country  whereCreatedAt($value)
+ * @method  static  Builder<static>|Country  whereCurrencyCode($value)
  * @method  static  Builder<static>|Country  whereId($value)
  * @method  static  Builder<static>|Country  whereIsoCode($value)
  * @method  static  Builder<static>|Country  whereName($value)
