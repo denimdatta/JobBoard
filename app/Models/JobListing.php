@@ -47,6 +47,16 @@ class JobListing extends Model
     ];
 
     /**
+     * Defines the relationship between the JobListing and the Company model.
+     *
+     * @return  BelongsTo  Relationship instance pointing to the Company model
+     */
+    public function company(): BelongsTo
+    {
+        return $this->belongsTo(Company::class, 'company', 'name');
+    }
+
+    /**
      * Defines the relationship between the JobListing and the Country model.
      *
      * @return  BelongsTo  Relationship instance pointing to the Country model
