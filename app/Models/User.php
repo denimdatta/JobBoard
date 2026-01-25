@@ -26,20 +26,20 @@ use Illuminate\Support\Carbon;
  * @property-read DatabaseNotificationCollection<int, DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
  *
- * @method  static  \Database\Factories\UserFactory  factory($count = null, $state = [])
- * @method  static  Builder<static>|User             newModelQuery()
- * @method  static  Builder<static>|User             newQuery()
- * @method  static  Builder<static>|User             query()
- * @method  static  Builder<static>|User             whereCreatedAt($value)
- * @method  static  Builder<static>|User             whereEmail($value)
- * @method  static  Builder<static>|User             whereEmailVerifiedAt($value)
- * @method  static  Builder<static>|User             whereFirstName($value)
- * @method  static  Builder<static>|User             whereId($value)
- * @method  static  Builder<static>|User             whereLastName($value)
- * @method  static  Builder<static>|User             wherePassword($value)
- * @method  static  Builder<static>|User             whereRememberToken($value)
- * @method  static  Builder<static>|User             whereUpdatedAt($value)
- * @method  static  Builder<static>|User             whereUsername($value)
+ * @method  static  UserFactory           factory($count = null, $state = [])
+ * @method  static  Builder<static>|User  newModelQuery()
+ * @method  static  Builder<static>|User  newQuery()
+ * @method  static  Builder<static>|User  query()
+ * @method  static  Builder<static>|User  whereCreatedAt($value)
+ * @method  static  Builder<static>|User  whereEmail($value)
+ * @method  static  Builder<static>|User  whereEmailVerifiedAt($value)
+ * @method  static  Builder<static>|User  whereFirstName($value)
+ * @method  static  Builder<static>|User  whereId($value)
+ * @method  static  Builder<static>|User  whereLastName($value)
+ * @method  static  Builder<static>|User  wherePassword($value)
+ * @method  static  Builder<static>|User  whereRememberToken($value)
+ * @method  static  Builder<static>|User  whereUpdatedAt($value)
+ * @method  static  Builder<static>|User  whereUsername($value)
  *
  * @mixin Eloquent
  */

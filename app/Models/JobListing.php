@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\JobListingFactory;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -19,21 +20,21 @@ use Illuminate\Support\Carbon;
  * @property  int          $salary         Salary in Low Denomination (Cent or Paisa
  * @property  Carbon|null  $created_at
  * @property  Carbon|null  $updated_at
- * @property-read \App\Models\Country $country
+ * @property-read Country $country
  *
- * @method  static  \Database\Factories\JobListingFactory  factory($count = null, $state = [])
- * @method  static  Builder<static>|JobListing             newModelQuery()
- * @method  static  Builder<static>|JobListing             newQuery()
- * @method  static  Builder<static>|JobListing             query()
- * @method  static  Builder<static>|JobListing             whereCompany($value)
- * @method  static  Builder<static>|JobListing             whereCountryCode($value)
- * @method  static  Builder<static>|JobListing             whereCreatedAt($value)
- * @method  static  Builder<static>|JobListing             whereCurrencyCode($value)
- * @method  static  Builder<static>|JobListing             whereId($value)
- * @method  static  Builder<static>|JobListing             whereLocation($value)
- * @method  static  Builder<static>|JobListing             whereSalary($value)
- * @method  static  Builder<static>|JobListing             whereTitle($value)
- * @method  static  Builder<static>|JobListing             whereUpdatedAt($value)
+ * @method  static  JobListingFactory           factory($count = null, $state = [])
+ * @method  static  Builder<static>|JobListing  newModelQuery()
+ * @method  static  Builder<static>|JobListing  newQuery()
+ * @method  static  Builder<static>|JobListing  query()
+ * @method  static  Builder<static>|JobListing  whereCompany($value)
+ * @method  static  Builder<static>|JobListing  whereCountryCode($value)
+ * @method  static  Builder<static>|JobListing  whereCreatedAt($value)
+ * @method  static  Builder<static>|JobListing  whereCurrencyCode($value)
+ * @method  static  Builder<static>|JobListing  whereId($value)
+ * @method  static  Builder<static>|JobListing  whereLocation($value)
+ * @method  static  Builder<static>|JobListing  whereSalary($value)
+ * @method  static  Builder<static>|JobListing  whereTitle($value)
+ * @method  static  Builder<static>|JobListing  whereUpdatedAt($value)
  *
  * @mixin Eloquent
  */
