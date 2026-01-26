@@ -7,6 +7,7 @@
     <ul>
         <li><b>Salary:</b> <i>{{ $job['currency_code'] }}</i> {{ $job['salary'] / 100 }}</li>
         <li><b>Location:</b> {{ $job['location'] }}, {{ $job['country_code'] }}</li>
+        <li><b>Company:</b> {{ $job['company'] }}</li>
         <li><b>Job ID:</b> {{ $job['id'] }}</li>
     </ul>
 </x-layout>
