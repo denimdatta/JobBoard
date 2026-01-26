@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->foreignIdFor(Company::class)
                 ->constrained()
-                ->onDelete('cascade');
+                ->cascadeOnDelete();
             $table->string('location');
             $table->string('country_code', 2)
                 ->default('CA');
@@ -31,7 +31,7 @@ return new class extends Migration
             $table->foreign('country_code')
                 ->references('iso_code')
                 ->on(new Country()->getTable())
-                ->onDelete('cascade');
+                ->cascadeOnDelete();
         });
     }
 
