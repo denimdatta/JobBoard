@@ -35,10 +35,11 @@ Route::get('/jobs/company/{id}', function ($id) {
 
 Route::get('/jobs/tag/{id}', function ($id) {
     $tag = Tag::with('jobs.company')->find($id);
+    $jobs = $tag->jobs()->paginate(5);
 
     return view('tag_job', [
         'tag' => $tag,
-        'jobs' => $tag->jobs,
+        'jobs' => $jobs,
     ]);
 });
 
