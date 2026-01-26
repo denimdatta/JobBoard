@@ -23,5 +23,11 @@
             <b>Job ID:</b>
             {{ $job['id'] }}
         </li>
+        <li>
+            <b>Tags:</b> |
+            @foreach($job['tags'] as $tag)
+                {{$tag['name']}} |
+            @endforeach
+        </li>
     </ul>
 </x-layout>
