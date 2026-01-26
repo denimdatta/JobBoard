@@ -31,7 +31,7 @@ return new class extends Migration
             $table->foreign('country_code')
                 ->references('iso_code')
                 ->on(new Country()->getTable())
-                ->cascadeOnDelete();
+                ->onDelete('cascade');
         });
     }
 
