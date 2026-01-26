@@ -16,17 +16,17 @@ return new class extends Migration
         Schema::create('job_listings', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('company');
-            $table->string('location');
-            $table->string('country_code', 2)->default('CA');
-            $table->string('currency_code', 3)->default('CAD');
-            $table->unsignedInteger('salary')->comment('Salary in Low Denomination (Cent or Paisa');
-            $table->timestamps();
-
-            $table->foreign('company')
-                ->references('name')
-                ->on(new Company()->getTable())
+            $table->foreignIdFor(Company::class)
+                ->constrained()
                 ->onDelete('cascade');
+            $table->string('location');
+            $table->string('country_code', 2)
+                ->default('CA');
+            $table->string('currency_code', 3)
+                ->default('CAD');
+            $table->unsignedInteger('salary')
+                ->comment('Salary in Low Denomination (Cent or Paisa');
+            $table->timestamps();
 
             $table->foreign('country_code')
                 ->references('iso_code')
