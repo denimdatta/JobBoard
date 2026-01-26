@@ -18,7 +18,6 @@ class JobListingFactory extends Factory
      */
     public function definition(): array
     {
-        $company = Company::query()->inRandomOrder()->first();
         $country = Country::query()->inRandomOrder()->first();
 
         $country_code = $country->iso_code;
@@ -28,7 +27,7 @@ class JobListingFactory extends Factory
 
         return [
             'title' => $this->faker->jobTitle(),
-            'company' => $company->name,
+            'company' => Company::query()->inRandomOrder()->first()->name,
             'location' => $this->faker->city(),
             'country_code' => $country_code,
             'currency_code' => $currency_code,
