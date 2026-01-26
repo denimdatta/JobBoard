@@ -16,3 +16,7 @@
         </a>
     @endforeach
 </div>
+
+<div class="mt-4 mb-20">
+    {{ $jobs->links() }}
+</div>
