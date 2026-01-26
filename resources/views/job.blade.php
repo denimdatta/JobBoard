@@ -26,7 +26,10 @@
         <li>
             <b>Tags:</b> |
             @foreach($job['tags'] as $tag)
-                {{$tag['name']}} |
+                <a href="/jobs/tag/{{ $tag['id'] }}" class="text-blue-500 hover:underline">
+                    {{$tag['name']}}
+                </a>
+                |
             @endforeach
         </li>
     </ul>
