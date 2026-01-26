@@ -24,14 +24,16 @@ Route::get('/jobs/{id}', function ($id) {
 });
 
 Route::get('/jobs/company/{id}', function ($id) {
+    $company = Company::with('jobs.company')->find($id);
+
     return view('company_job', [
-        'company' => Company::query()->find($id),
-        'jobs' => JobListing::query()->where('company_id', $id)->get(),
+        'company' => $company,
+        'jobs' => $company->jobs,
     ]);
 });
 
 Route::get('/jobs/tag/{id}', function ($id) {
-    $tag = Tag::query()->find($id);
+    $tag = Tag::with('jobs.company')->find($id);
 
     return view('tag_job', [
         'tag' => $tag,
