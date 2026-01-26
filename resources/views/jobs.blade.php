@@ -3,17 +3,15 @@
         Jobs Page
     </x-slot>
 
-    <ul>
+    <div class="space-y-4">
         @foreach($jobs as $job)
-            <li>
-                <a href="/jobs/{{ $job['id'] }}" class="text-blue-500 hover:underline">
-                    <strong>{{ $job['title'] }}</strong>
-                </a>
+            <a href="/jobs/{{ $job['id'] }}" class="block px-4 py-6 border border-blue-500 rounded-lg">
+                <strong>{{ $job['title'] }}</strong>
                 : pays
                 <i>{{ $job['currency_code'] }} {{ $job['salary'] / 100 }}</i>
                 in
                 <u>{{ $job['location'] }}, {{ $job['country_code'] }}</u>
-            </li>
+            </a>
         @endforeach
-    </ul>
+    </div>
 </x-layout>
