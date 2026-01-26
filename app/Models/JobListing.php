@@ -5,6 +5,7 @@ namespace App\Models;
 use Database\Factories\JobListingFactory;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -23,6 +24,8 @@ use Illuminate\Support\Carbon;
  * @property  Carbon|null  $updated_at
  * @property-read Company $company
  * @property-read Country $country
+ * @property-read Collection<int, Tag> $tags
+ * @property-read int|null $tags_count
  *
  * @method  static  JobListingFactory           factory($count = null, $state = [])
  * @method  static  Builder<static>|JobListing  newModelQuery()
@@ -75,7 +78,7 @@ class JobListing extends Model
     /**
      * Defines the relationship between the JobListing and the Tag model.
      *
-     * @return BelongsToMany<Tag> Relationship instance pointing to the Tag model
+     * @return  BelongsToMany<Tag>  Relationship instance pointing to the Tag model
      */
     public function tags(): BelongsToMany
     {
