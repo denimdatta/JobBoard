@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Company;
 use App\Models\JobListing;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -38,5 +39,6 @@ class DatabaseSeeder extends Seeder
 
         Company::factory()->count(5)->create();
         JobListing::factory()->count(25)->create();
+        Tag::factory()->count(5)->create();
     }
 }
