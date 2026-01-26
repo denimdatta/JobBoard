@@ -27,7 +27,7 @@ class JobListingFactory extends Factory
 
         return [
             'title' => $this->faker->jobTitle(),
-            'company' => Company::query()->inRandomOrder()->first()->name,
+            'company_id' => Company::query()->inRandomOrder()->first()->id,
             'location' => $this->faker->city(),
             'country_code' => $country_code,
             'currency_code' => $currency_code,
