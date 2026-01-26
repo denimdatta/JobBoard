@@ -7,6 +7,7 @@ use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
 
 /**
@@ -30,4 +31,14 @@ class Tag extends Model
 {
     /** @use HasFactory<TagFactory> */
     use HasFactory;
+
+    /**
+     * Defines the relationship between the Tag and the JobListing model.
+     *
+     * @return BelongsToMany<JobListing> Relationship instance pointing to the JobListing model
+     */
+    public function jobs(): BelongsToMany
+    {
+        return $this->belongsToMany(JobListing::class);
+    }
 }

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Carbon;
 
 /**
@@ -69,5 +70,15 @@ class JobListing extends Model
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class, 'country_code', 'iso_code');
+    }
+
+    /**
+     * Defines the relationship between the JobListing and the Tag model.
+     *
+     * @return BelongsToMany<Tag> Relationship instance pointing to the Tag model
+     */
+    public function tags(): BelongsToMany
+    {
+        return $this->belongsToMany(Tag::class);
     }
 }
