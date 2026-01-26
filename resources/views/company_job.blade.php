@@ -3,5 +3,5 @@
         {{ $company['name'] }} | Jobs Page
     </x-slot>
 
-    <x-shared-job-list linkClass="border-green-500" :jobs="$jobs"/>
+    <x-shared-job-list link-class="border-green-500" company-color-class="text-green-500" :jobs="$jobs"/>
 </x-layout>
