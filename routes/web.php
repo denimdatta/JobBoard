@@ -17,6 +17,10 @@ Route::get('/jobs', function () {
     ]);
 });
 
+Route::get('/jobs/create', function () {
+    return view('jobs.create');
+});
+
 Route::get('/jobs/company/{id}', function ($id) {
     $company = Company::with('jobs.company')->find($id);
     $jobs = $company->jobs()->paginate(5);
