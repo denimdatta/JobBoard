@@ -17,12 +17,6 @@ Route::get('/jobs', function () {
     ]);
 });
 
-Route::get('/jobs/{id}', function ($id) {
-    return view('job', [
-        'job' => JobListing::query()->find($id),
-    ]);
-});
-
 Route::get('/jobs/company/{id}', function ($id) {
     $company = Company::with('jobs.company')->find($id);
     $jobs = $company->jobs()->paginate(5);
@@ -40,6 +34,12 @@ Route::get('/jobs/tag/{id}', function ($id) {
     return view('jobs.tag', [
         'tag' => $tag,
         'jobs' => $jobs,
+    ]);
+});
+
+Route::get('/jobs/{id}', function ($id) {
+    return view('jobs.show', [
+        'job' => JobListing::query()->find($id),
     ]);
 });
 
