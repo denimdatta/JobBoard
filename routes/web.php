@@ -12,7 +12,7 @@ Route::get('/', function () {
 Route::get('/jobs', function () {
     $jobs = JobListing::with('company')->paginate(5);
 
-    return view('jobs', [
+    return view('jobs.index', [
         'jobs' => $jobs,
     ]);
 });
@@ -27,7 +27,7 @@ Route::get('/jobs/company/{id}', function ($id) {
     $company = Company::with('jobs.company')->find($id);
     $jobs = $company->jobs()->paginate(5);
 
-    return view('company_job', [
+    return view('jobs.company', [
         'company' => $company,
         'jobs' => $jobs,
     ]);
@@ -37,7 +37,7 @@ Route::get('/jobs/tag/{id}', function ($id) {
     $tag = Tag::with('jobs.company')->find($id);
     $jobs = $tag->jobs()->paginate(5);
 
-    return view('tag_job', [
+    return view('jobs.tag', [
         'tag' => $tag,
         'jobs' => $jobs,
     ]);
