@@ -78,7 +78,7 @@ class JobListing extends Model
     /**
      * Defines the relationship between the JobListing and the Tag model.
      *
-     * @return  BelongsToMany<Tag>  Relationship instance pointing to the Tag model
+     * @return  BelongsToMany<Tag, $this>  Relationship instance pointing to the Tag model
      */
     public function tags(): BelongsToMany
     {
